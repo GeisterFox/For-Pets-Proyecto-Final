@@ -1,0 +1,51 @@
+body{
+	font-family: "Josefin Sans", sans-serif;
+}
+
+header{
+	font-family: "Josefin Sans", sans-serif;
+}
+
+header.masthead {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  background: url(../img/Home/Banner/flyer8.jpg) no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.boton{
+	background-color: #ffed6c;
+}
+
+.fondo{
+	background-color: #EDE7BD;
+}
+
+.contenedorNos{
+	background-color: #C74B4B;
+}
+
+.fondonav{
+	background-color: #000000;
+}
+
+i.bi-star-fill{
+	color: #ffc107;
+}
+
+i.bi-star{
+	color: #ffc107;
+}
+
+i.bi-star-half{
+	color: #ffc107;
+}
+
+.blanco{
+	color: #ffffff;
+}
