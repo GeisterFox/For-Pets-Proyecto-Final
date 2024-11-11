@@ -268,25 +268,28 @@
 			<h2><strong>DEJÁ TU RESEÑA</strong></h2>
 			<p class="h4">Ayúdanos a mejorar compartiendo tu experiencia con nosotros</p>
 		</div>
+		
 		<div class="container pt-5">
 		<div class="row">
 			<div class="col-lg-4 order-lg-1 order-md-1">
-				<h4>Nombre</h4>
-				<div class="form-floating mb-3">
-					<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-					<label for="floatingInput">Ingrese su nombre</label>
+				<form class="needs-validation" novalidate>
+				<div class="mb-3">
+					<label for="Validar" class="form-label"><h4>Nombre</h4></label>
+					<input type="text" class="form-control" id="Validar" value="" required>
+					<div class="valid-feedback">
+						Bien!
+					</div>
 				</div>
-				<h4>Mail</h4>
-				<div class="form-floating mb-3">
-					<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-					<label for="floatingInput">Ingrese su mail</label>
+				<div class="mb-3">
+					<label for="Email1" class="form-label"><h4>Mail</h4></label>
+					<input type="email" class="form-control" id="Email1" aria-describedby="emailHelp">
 				</div>
 			</div>
 			<div class="col-lg-5 order-lg-2 order-md-2">
 				<h4>Reseña</h4>
 				<div class="form-floating mb-3">
-					<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 174px"></textarea>
-					<label for="floatingTextarea2">Escribe su reseña...</label>
+					<textarea class="form-control" placeholder="Leave a comment here" id="AreaTexto" style="height: 174px"></textarea>
+					<label for="AreaTexto">Escribe su reseña...</label>
 				</div>
 			</div>
 			<div class="col-lg-3 order-lg-2 mb-5 pt-5">
@@ -294,8 +297,9 @@
 			</div>
 		</div>
 			<div class="d-grid gap-2 col-6 mx-auto my-3 pb-5">
-				<button class="btn btn-warning boton" type="button">Enviar</button>
+				<button class="btn btn-warning boton" type="submit">Enviar</button>
 			</div>
+			</form>
 		</div>
 		</section>
 		
@@ -315,6 +319,25 @@
     </footer>
 		  
 		  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		  
+		  <script>
+			(() => {
+			'use strict'
+
+			  const forms = document.querySelectorAll('.needs-validation')
+
+			  Array.from(forms).forEach(form => {
+				form.addEventListener('submit', event => {
+				  if (!form.checkValidity()) {
+					event.preventDefault()
+					event.stopPropagation()
+				  }
+
+				  form.classList.add('was-validated')
+				}, false)
+			  })
+			})()
+		  </script>
 		  
 		  <script>
 			$(function () {
